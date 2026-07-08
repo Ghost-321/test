@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Side Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="side-nav">
+        <!-- SHOP LEFT NAVIGATION:
+          Product websites often use side navigation for categories.
+          The active class shows the current page/category.
+          Keep this menu consistent on every page so shoppers do not get lost.
+        -->
+        <a class="logo" href="index.html"><span>SS</span>Side Shop</a>
+        <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="student-1.html">Student 1</a></li>
+            <li><a href="student-2.html">Student 2</a></li>
+            <li><a href="student-3.html">Student 3</a></li>
+            <li><a href="student-4.html">Student 4</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="page-content">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Sidebar ecommerce template</p>
+            <h1>A shop layout with categories on the left</h1>
+            <p class="lead">Use this for products, merch, school market stalls, digital downloads, or a pretend shop project.</p>
+            <div class="button-row">
+              <a class="button" href="shop.html">Browse shop</a>
+              <a class="button secondary" href="product.html">Featured product</a>
+            </div>
+          </div>
+          <img class="hero-image" src="assets/images/shop-shelf.svg" alt="Shop shelf illustration">
+        </section>
+        <section class="section product-grid">
+          <article class="product-card"><span class="price">$19</span><h3>Starter item</h3><p>Short product description.</p><button class="button add-to-cart" type="button">Add to cart</button></article>
+          <article class="product-card"><span class="price">$29</span><h3>Popular item</h3><p>Short product description.</p><button class="button add-to-cart" type="button">Add to cart</button></article>
+          <article class="product-card"><span class="price">$39</span><h3>Premium item</h3><p>Short product description.</p><button class="button add-to-cart" type="button">Add to cart</button></article>
+        </section>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

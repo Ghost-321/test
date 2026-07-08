@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Support information illustration</title>
+  <desc id="desc">Soft overlapping circles and information cards representing support resources.</desc>
+  <rect width="640" height="420" rx="24" fill="#e7f3f1"/>
+  <circle cx="160" cy="140" r="82" fill="#f4b8a6"/>
+  <circle cx="260" cy="200" r="118" fill="#b9deda"/>
+  <circle cx="440" cy="150" r="92" fill="#f8d9cf"/>
+  <rect x="92" y="250" width="456" height="72" rx="12" fill="#ffffff" stroke="#2f6f73" stroke-width="4"/>
+  <rect x="132" y="278" width="210" height="12" rx="6" fill="#2f6f73"/>
+  <rect x="132" y="300" width="310" height="10" rx="5" fill="#9abfbb"/>
+  <path d="M318 120c30-44 92-24 92 28 0 60-92 106-92 106s-92-46-92-106c0-52 62-72 92-28z" fill="#ffffff" stroke="#2f6f73" stroke-width="5"/>
+</svg>

@@ -1,0 +1,36 @@
+:root { --primary-colour: #8d4f6f; --accent-colour: #e9b44c; --background-colour: #fbf8f6; --surface-colour: #ffffff; --text-colour: #2a252c; --muted-colour: #6e6470; --border-colour: #eadfdf; --border-radius: 8px; --max-width: 1240px; --font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; }
+img { max-width: 100%; display: block; }
+a { color: var(--primary-colour); font-weight: 800; }
+.container { width: min(100% - 32px, var(--max-width)); margin: 0 auto; }
+.notice-bar { background: #3f3648; color: #fff; padding: 10px 0; font-weight: 800; }
+.site-header { background: #fff; border-bottom: 1px solid var(--border-colour); position: sticky; top: 0; z-index: 10; }
+/* Top navigation layout:
+   The logo appears first, then the page links run horizontally.
+   On small screens, script.js toggles .is-open so the menu can open below the logo.
+*/
+.navbar { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: nowrap; }
+.logo { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; color: var(--text-colour); text-decoration: none; font-size: 1rem; font-weight: 900; white-space: nowrap; }
+.logo span { width: 34px; height: 34px; display: grid; place-items: center; background: var(--accent-colour); color: #3f3648; border-radius: 50%; font-size: .78rem; }
+.menu-toggle { display: none; border: 2px solid var(--primary-colour); background: #fff; color: var(--primary-colour); padding: 8px 12px; font: inherit; font-weight: 900; }
+.nav-links { display: flex; flex: 1 1 auto; justify-content: flex-end; flex-wrap: nowrap; gap: 4px; list-style: none; margin: 0; padding: 0; min-width: 0; }
+.nav-links a { display: block; color: var(--text-colour); text-decoration: none; padding: 7px 7px; border-radius: var(--border-radius); font-size: .84rem; line-height: 1.15; white-space: nowrap; }
+/* Current page highlight: move class="active" to the link for the page being viewed. */
+.nav-links a.active, .nav-links a:hover, .nav-links a:focus { background: #fff4f7; color: var(--primary-colour); }
+.hero, .section, .page-header { padding: 46px 0; }
+.hero { background: #fff4f7; }
+.hero-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 34px; align-items: center; }
+.hero-image { border-radius: var(--border-radius); box-shadow: 0 18px 40px rgba(63,54,72,.1); }
+.eyebrow { margin: 0 0 12px; color: var(--primary-colour); font-weight: 900; text-transform: uppercase; letter-spacing: 0; }
+h1 { font-size: clamp(2.1rem, 6vw, 4.4rem); line-height: 1; margin: 0 0 18px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; margin-top: 0; }
+.lead { color: var(--muted-colour); max-width: 760px; font-size: 1.2rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-block; border: 0; border-radius: var(--border-radius); background: var(--primary-colour); color: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 900; }
+.button.secondary { background: #fff; color: var(--primary-colour); border: 2px solid var(--primary-colour); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card, .timeline article, .checklist label, .resource-list a { background: var(--surface-colour); border: 1px solid var(--border-colour); border-radius: var(--border-radius); padding: 22px; box-shadow: 0 12px 30px rgba(63,54,72,.06); }
+.timeline, .checklist, .resource-list { display: grid; gap: 16px; }
+.checklist input { width: auto; margin-right: 8px; }
+@media (max-width: 920px) { .menu-toggle { display: inline-block; } .navbar { flex-wrap: wrap; padding: 14px 0; } .nav-links { display: none; width: 100%; flex: none; flex-direction: column; align-items: stretch; } .nav-links a { font-size: 1rem; padding: 10px 12px; } .nav-links.is-open { display: flex; } .hero-layout, .grid { grid-template-columns: 1fr; } }

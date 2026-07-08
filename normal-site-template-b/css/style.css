@@ -1,0 +1,22 @@
+/* Editorial field magazine style inspired by visual storytelling sites. */
+:root { --primary-colour: #facc15; --secondary-colour: #38bdf8; --background-colour: #0b0b0b; --text-colour: #f8fafc; --card-colour: #161616; --border-colour: #3f3f46; --muted-colour: #d4d4d8; --border-radius: 2px; --section-padding: 54px; --max-width: 1100px; --font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; } body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; } img { max-width: 100%; display: block; } a { color: var(--primary-colour); font-weight: 700; }
+.service-bar { background: #0b0c0c; color: #fff; padding: 10px 0; font-weight: 700; }
+.container { width: min(100% - 32px, var(--max-width)); margin: 0 auto; }
+.site-header { border-bottom: 10px solid var(--primary-colour); background: #fff; } .navbar { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; color: #0b0c0c; text-decoration: none; font-size: 1.3rem; font-weight: 900; } .logo img { width: 42px; height: 42px; border: 2px solid #0b0c0c; object-fit: cover; }
+.menu-toggle { display: none; border: 2px solid #0b0c0c; background: #fff; padding: 8px 12px; font: inherit; font-weight: 900; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 18px; list-style: none; margin: 0; padding: 0; } .nav-links a { color: #0b0c0c; text-decoration: none; } .nav-links a:hover, .nav-links a:focus { text-decoration: underline; text-decoration-thickness: 3px; }
+.hero, .section { padding: var(--section-padding) 0; } .hero { background: #0b0b0b; border-bottom: 1px solid var(--border-colour); }
+.hero-layout, .two-column, .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items: start; }
+h1 { font-size: clamp(2.4rem, 7vw, 4.8rem); line-height: 1; margin: 0 0 18px; } h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.05; margin-top: 0; } .lead { font-size: 1.25rem; color: var(--muted-colour); max-width: 720px; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; } .button { display: inline-block; background: #00703c; color: #fff; padding: 12px 18px; border: 0; box-shadow: 0 3px 0 #002d18; text-decoration: none; font-weight: 900; cursor: pointer; } .button.secondary { background: #fff; color: var(--primary-colour); border: 2px solid var(--primary-colour); box-shadow: none; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; } .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.card, .highlight-box, .faq-item, .cart-summary { background: #161616; border: 1px solid var(--border-colour); border-top: 6px solid var(--primary-colour); padding: 22px; } .card h3 { margin-top: 0; }
+.placeholder-box { min-height: 280px; border: 3px dashed var(--border-colour); background: linear-gradient(135deg, #18181b, #27272a); display: grid; place-items: center; text-align: center; padding: 24px; color: var(--muted-colour); font-weight: 700; }
+.task-list { counter-reset: step; border-top: 1px solid var(--border-colour); } .task-list li { counter-increment: step; list-style: none; padding: 18px 0 18px 52px; border-bottom: 1px solid var(--border-colour); position: relative; } .task-list li::before { content: counter(step); position: absolute; left: 0; top: 18px; width: 34px; height: 34px; display: grid; place-items: center; background: var(--primary-colour); color: #fff; font-weight: 900; border-radius: 50%; }
+.tag { display: inline-block; background: var(--secondary-colour); color: #0b0c0c; padding: 5px 10px; font-weight: 900; }
+form { display: grid; gap: 12px; } label { font-weight: 900; } input, textarea, select { width: 100%; padding: 12px; border: 2px solid #0b0c0c; font: inherit; }
+.site-footer { padding: 42px 0; background: #000; color: #fff; } .site-footer a { color: #fff; } .site-footer ul { list-style: none; padding: 0; }
+.cart-count { background: var(--secondary-colour); color: #0b0c0c; padding: 2px 7px; margin-left: 4px; }
+@media (max-width: 880px) { .menu-toggle { display: inline-block; } .navbar { flex-wrap: wrap; padding: 14px 0; } .nav-links { display: none; width: 100%; flex-direction: column; align-items: flex-start; } .nav-links.is-open { display: flex; } .hero-layout, .two-column, .footer-grid, .grid, .product-grid { grid-template-columns: 1fr; } }

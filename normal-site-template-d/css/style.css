@@ -1,0 +1,41 @@
+:root { --primary-colour: #2f6f73; --secondary-colour: #f4b8a6; --background-colour: #f7faf9; --text-colour: #172322; --muted-colour: #5c6f6d; --card-colour: #ffffff; --border-colour: #d8e5e2; --border-radius: 8px; --max-width: 1240px; --font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; }
+img { max-width: 100%; display: block; }
+a { color: var(--primary-colour); font-weight: 800; }
+.container { width: min(100% - 32px, var(--max-width)); margin: 0 auto; }
+.notice-bar { background: #173b3e; color: #fff; padding: 10px 0; font-weight: 800; }
+.site-header { background: #fff; border-bottom: 1px solid var(--border-colour); }
+/* Top navigation layout:
+   The navbar uses flexbox so the logo sits on the left and links sit on the right.
+   On small screens, script.js adds/removes .is-open when the Menu button is clicked.
+*/
+.navbar { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: nowrap; }
+.logo { flex: 0 0 auto; color: var(--text-colour); text-decoration: none; font-size: 1.05rem; font-weight: 900; white-space: nowrap; }
+.menu-toggle { display: none; border: 2px solid var(--primary-colour); background: #fff; color: var(--primary-colour); padding: 8px 12px; font: inherit; font-weight: 900; }
+.nav-links { display: flex; flex: 1 1 auto; justify-content: flex-end; flex-wrap: nowrap; gap: 4px; list-style: none; margin: 0; padding: 0; min-width: 0; }
+.nav-links a { display: block; color: var(--text-colour); text-decoration: none; padding: 7px 7px; border-radius: var(--border-radius); font-size: .84rem; line-height: 1.15; white-space: nowrap; }
+/* Current page highlight: move class="active" to the link for the page being viewed. */
+.nav-links a.active, .nav-links a:hover, .nav-links a:focus { background: #e7f3f1; color: var(--primary-colour); }
+.hero, .section, .page-header { padding: 48px 0; }
+.hero { background: linear-gradient(180deg, #eef7f5, #f7faf9); }
+.hero-layout, .two-column { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: start; }
+.eyebrow { margin: 0 0 12px; color: var(--primary-colour); text-transform: uppercase; font-weight: 900; letter-spacing: 0; }
+h1 { font-size: clamp(2.2rem, 6vw, 4.4rem); line-height: 1; margin: 0 0 18px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.1; margin-top: 0; }
+.lead { max-width: 760px; color: var(--muted-colour); font-size: 1.2rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-block; border: 0; border-radius: var(--border-radius); background: var(--primary-colour); color: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 900; }
+.button.secondary { background: #fff; color: var(--primary-colour); border: 2px solid var(--primary-colour); }
+.grid, .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card, .help-card, .steps article { background: var(--card-colour); border: 1px solid var(--border-colour); border-radius: var(--border-radius); padding: 24px; box-shadow: 0 12px 30px rgba(23,35,34,.06); }
+.help-card { border-top: 8px solid var(--secondary-colour); }
+.hero-image { border-radius: var(--border-radius); margin-bottom: 18px; }
+.steps span { width: 36px; height: 36px; display: grid; place-items: center; background: var(--primary-colour); color: #fff; border-radius: 50%; font-weight: 900; }
+.resource-list { display: grid; gap: 12px; }
+.resource-list a { background: #fff; border: 1px solid var(--border-colour); border-radius: var(--border-radius); padding: 16px; text-decoration: none; }
+form { display: grid; gap: 12px; }
+label { font-weight: 900; }
+input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border-colour); border-radius: var(--border-radius); font: inherit; }
+.site-footer { background: #173b3e; color: #fff; padding: 36px 0; }
+@media (max-width: 880px) { .menu-toggle { display: inline-block; } .navbar { flex-wrap: wrap; padding: 14px 0; } .nav-links { display: none; width: 100%; flex: none; flex-direction: column; align-items: stretch; } .nav-links a { font-size: 1rem; padding: 10px 12px; } .nav-links.is-open { display: flex; } .hero-layout, .two-column, .grid, .steps { grid-template-columns: 1fr; } }

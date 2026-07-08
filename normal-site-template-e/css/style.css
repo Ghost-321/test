@@ -1,0 +1,39 @@
+:root { --nav-colour: #3f3648; --primary-colour: #8d4f6f; --accent-colour: #e9b44c; --background-colour: #fbf8f6; --surface-colour: #ffffff; --text-colour: #2a252c; --muted-colour: #6e6470; --border-colour: #eadfdf; --border-radius: 8px; --font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; }
+img { max-width: 100%; display: block; }
+a { color: var(--primary-colour); font-weight: 800; }
+.site-shell { min-height: 100vh; display: grid; grid-template-columns: 270px 1fr; }
+/* Left navigation layout:
+   The sidebar is its own column in .site-shell.
+   It becomes a normal top block on mobile so the page has enough room.
+*/
+.side-nav { position: sticky; top: 0; min-height: 100vh; align-self: start; background: var(--nav-colour); color: #fff; padding: 24px 18px; }
+.logo { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 1.25rem; font-weight: 900; margin-bottom: 28px; }
+.logo span { width: 44px; height: 44px; display: grid; place-items: center; background: var(--accent-colour); color: var(--nav-colour); border-radius: 50%; font-size: .95rem; }
+.menu-toggle { display: none; width: 100%; border: 2px solid #fff; background: transparent; color: #fff; padding: 10px 12px; font: inherit; font-weight: 900; }
+.nav-links { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: block; color: #f4eef2; text-decoration: none; padding: 11px 12px; border-radius: var(--border-radius); }
+.nav-links a:hover, .nav-links a:focus { background: rgba(255,255,255,.12); color: #fff; }
+/* Current page highlight: move class="active" to the link for the page being viewed. */
+.nav-links a.active { background: #fff4f7; color: var(--primary-colour); box-shadow: inset 4px 0 0 var(--accent-colour); }
+.page-content { padding: 44px; max-width: 1180px; width: 100%; }
+.hero { min-height: 460px; display: grid; align-content: center; padding: 48px; background: #fff; border: 1px solid var(--border-colour); border-radius: var(--border-radius); box-shadow: 0 14px 35px rgba(63,54,72,.08); }
+.hero-image { width: min(100%, 560px); border-radius: var(--border-radius); margin-bottom: 24px; }
+.page-header, .section { padding: 30px 0; }
+.eyebrow { margin: 0 0 12px; color: var(--primary-colour); font-weight: 900; text-transform: uppercase; letter-spacing: 0; }
+h1 { font-size: clamp(2.1rem, 6vw, 4.2rem); line-height: 1; margin: 0 0 18px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; margin-top: 0; }
+.lead { color: var(--muted-colour); max-width: 760px; font-size: 1.2rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-block; border: 0; border-radius: var(--border-radius); background: var(--primary-colour); color: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 900; }
+.button.secondary { background: #fff; color: var(--primary-colour); border: 2px solid var(--primary-colour); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.card, .timeline article, .checklist label, .resource-list a { background: var(--surface-colour); border: 1px solid var(--border-colour); border-radius: var(--border-radius); padding: 22px; box-shadow: 0 12px 30px rgba(63,54,72,.06); }
+.timeline, .checklist, .resource-list { display: grid; gap: 16px; }
+.checklist input { width: auto; margin-right: 8px; }
+form { display: grid; gap: 12px; }
+label { font-weight: 900; }
+input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border-colour); border-radius: var(--border-radius); font: inherit; }
+@media (max-width: 840px) { .site-shell { display: block; } .side-nav { position: static; min-height: auto; } .menu-toggle { display: block; } .nav-links { display: none; margin-top: 14px; } .nav-links.is-open { display: grid; } .page-content { padding: 24px 18px; } .hero { min-height: auto; padding: 28px; } .grid, .two-column { grid-template-columns: 1fr; } }

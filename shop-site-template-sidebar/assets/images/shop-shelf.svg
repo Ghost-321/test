@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 430" role="img" aria-labelledby="title desc">
+  <title id="title">Shop shelf illustration</title>
+  <desc id="desc">A set of product boxes on shelves.</desc>
+  <rect width="640" height="430" rx="28" fill="#ecf7f3"/>
+  <rect x="70" y="120" width="500" height="18" rx="9" fill="#0d3b34"/>
+  <rect x="70" y="276" width="500" height="18" rx="9" fill="#0d3b34"/>
+  <rect x="112" y="58" width="86" height="62" rx="10" fill="#ffcf5a"/>
+  <rect x="236" y="48" width="104" height="72" rx="10" fill="#2bbf89"/>
+  <rect x="382" y="66" width="118" height="54" rx="10" fill="#ff7a59"/>
+  <rect x="104" y="194" width="116" height="82" rx="12" fill="#ffffff" stroke="#0d3b34" stroke-width="5"/>
+  <rect x="262" y="174" width="92" height="102" rx="12" fill="#ffffff" stroke="#0d3b34" stroke-width="5"/>
+  <rect x="402" y="204" width="126" height="72" rx="12" fill="#ffffff" stroke="#0d3b34" stroke-width="5"/>
+</svg>

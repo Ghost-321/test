@@ -1,0 +1,36 @@
+:root { --nav-colour: #0d3b34; --primary-colour: #2bbf89; --accent-colour: #ffcf5a; --orange-colour: #ff7a59; --background-colour: #f5f8f6; --surface-colour: #ffffff; --text-colour: #14211e; --muted-colour: #5f6f69; --border-colour: #d8e5df; --border-radius: 8px; --font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; }
+img { max-width: 100%; display: block; }
+a { color: var(--primary-colour); font-weight: 900; }
+.site-shell { min-height: 100vh; display: grid; grid-template-columns: 270px 1fr; }
+.side-nav { position: sticky; top: 0; min-height: 100vh; align-self: start; background: var(--nav-colour); color: #fff; padding: 24px 18px; }
+.logo { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 1.25rem; font-weight: 900; margin-bottom: 28px; }
+.logo span { width: 46px; height: 46px; display: grid; place-items: center; background: var(--accent-colour); color: var(--nav-colour); border-radius: 50%; }
+.menu-toggle { display: none; width: 100%; border: 2px solid #fff; background: transparent; color: #fff; padding: 10px 12px; font: inherit; font-weight: 900; }
+.nav-links { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: #edf8f4; text-decoration: none; padding: 11px 12px; border-radius: var(--border-radius); }
+.nav-links a:hover, .nav-links a:focus { background: rgba(255,255,255,.12); color: #fff; }
+/* Move class="active" to the current page link so shoppers know which section is open. */
+.nav-links a.active { background: #e9fbf3; color: #0d3b34; box-shadow: inset 4px 0 0 var(--accent-colour); }
+.cart-count { background: var(--orange-colour); color: #fff; border-radius: 999px; padding: 1px 8px; }
+.page-content { padding: 44px; max-width: 1180px; width: 100%; }
+.hero { display: grid; grid-template-columns: 1fr .9fr; gap: 34px; align-items: center; min-height: 520px; }
+.hero-image, .product-image { border-radius: var(--border-radius); box-shadow: 0 18px 40px rgba(13,59,52,.12); }
+.page-header, .section { padding: 30px 0; }
+.eyebrow { margin: 0 0 12px; color: var(--primary-colour); text-transform: uppercase; font-weight: 900; letter-spacing: 0; }
+h1 { font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 1; margin: 0 0 18px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.1; margin-top: 0; }
+.lead { color: var(--muted-colour); max-width: 760px; font-size: 1.2rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-block; border: 0; border-radius: var(--border-radius); background: var(--primary-colour); color: #0d3b34; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 900; cursor: pointer; }
+.button.secondary { background: #fff; color: #0d3b34; border: 2px solid #0d3b34; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.product-card, .cart-box { background: var(--surface-colour); border: 1px solid var(--border-colour); border-radius: var(--border-radius); padding: 22px; box-shadow: 0 12px 30px rgba(13,59,52,.07); }
+.price, .big-price { color: var(--orange-colour); font-size: 1.4rem; font-weight: 900; }
+.product-detail, .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.product-image { min-height: 340px; display: grid; place-items: center; background: #e9fbf3; color: var(--nav-colour); font-weight: 900; }
+form { display: grid; gap: 12px; }
+label { font-weight: 900; }
+input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border-colour); border-radius: var(--border-radius); font: inherit; }
+@media (max-width: 880px) { .site-shell { display: block; } .side-nav { position: static; min-height: auto; } .menu-toggle { display: block; } .nav-links { display: none; margin-top: 14px; } .nav-links.is-open { display: grid; } .page-content { padding: 24px 18px; } .hero, .product-grid, .product-detail, .two-column { grid-template-columns: 1fr; } .hero { min-height: auto; padding: 30px 0; } }

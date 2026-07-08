@@ -1,0 +1,57 @@
+/* HTML + CSS Learning Starter
+   This starter shows four real website patterns in simple student code.
+   TODO: Change the variables below to make your own version. */
+:root {
+  --primary-colour: #005ea5;
+  --secondary-colour: #ffdd00;
+  --background-colour: #ffffff;
+  --text-colour: #111111;
+  --card-colour: #f3f2f1;
+  --border-colour: #b1b4b6;
+  --muted-colour: #505a5f;
+  --border-radius: 4px;
+  --section-padding: 56px;
+  --max-width: 1120px;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family); color: var(--text-colour); background: var(--background-colour); line-height: 1.55; }
+a { color: var(--primary-colour); font-weight: 700; }
+img { max-width: 100%; display: block; }
+.top-strip { background: var(--text-colour); color: #fff; padding: 8px 0; font-size: .9rem; }
+.container { width: min(100% - 32px, var(--max-width)); margin: 0 auto; }
+.site-header { border-bottom: 1px solid var(--border-colour); background: var(--background-colour); }
+.navbar { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { color: var(--text-colour); text-decoration: none; font-size: 1.35rem; font-weight: 900; }
+.logo::before { content: ""; display: inline-block; width: 11px; height: 28px; margin-right: 10px; background: var(--secondary-colour); vertical-align: middle; }
+.nav-links { list-style: none; display: flex; flex-wrap: wrap; gap: 18px; margin: 0; padding: 0; }
+.nav-links a { color: var(--text-colour); text-decoration: none; }
+.nav-links a:hover, .nav-links a:focus { text-decoration: underline; }
+.hero, .section { padding: var(--section-padding) 0; }
+.hero { border-bottom: 1px solid var(--border-colour); }
+.hero-grid, .two-column { display: grid; grid-template-columns: 1.15fr .85fr; gap: 36px; align-items: center; }
+h1 { font-size: clamp(2.3rem, 7vw, 5.2rem); line-height: .98; margin: 0 0 18px; letter-spacing: 0; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); line-height: 1.05; margin-top: 0; }
+.lead { font-size: 1.25rem; color: var(--muted-colour); max-width: 720px; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-block; padding: 12px 18px; border: 2px solid var(--primary-colour); background: var(--primary-colour); color: #fff; text-decoration: none; font-weight: 900; border-radius: var(--border-radius); }
+.button.secondary { background: transparent; color: var(--primary-colour); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card { border-top: 5px solid var(--primary-colour); background: var(--card-colour); padding: 22px; min-height: 170px; }
+.card h3 { margin-top: 0; font-size: 1.35rem; }
+.placeholder-box { min-height: 280px; background: repeating-linear-gradient(135deg, #f7f7f7, #f7f7f7 14px, #e5e7eb 14px, #e5e7eb 28px); border: 2px dashed var(--border-colour); display: grid; place-items: center; text-align: center; padding: 24px; color: var(--muted-colour); font-weight: 700; }
+.map { display: grid; gap: 10px; }
+.map div { border-left: 6px solid var(--primary-colour); background: var(--card-colour); padding: 14px; }
+.challenge-list { border: 3px solid var(--secondary-colour); padding: 24px; background: #fffdf0; }
+.split-band { background: var(--text-colour); color: #fff; }
+.split-band .lead, .split-band a { color: #fff; }
+form { display: grid; gap: 12px; }
+label { font-weight: 900; }
+input, textarea { width: 100%; padding: 12px; border: 2px solid var(--border-colour); font: inherit; }
+.site-footer { padding: 36px 0; background: var(--text-colour); color: #fff; }
+.theme-basic { --primary-colour: #005ea5; --secondary-colour: #ffdd00; --card-colour: #f3f2f1; --border-radius: 4px; }
+.theme-colourful { --primary-colour: #c2410c; --secondary-colour: #14b8a6; --background-colour: #fff7ed; --text-colour: #1f2937; --card-colour: #ffffff; --border-radius: 18px; }
+.theme-modern { --primary-colour: #0f766e; --secondary-colour: #f59e0b; --background-colour: #f8fafc; --text-colour: #0f172a; --card-colour: #ffffff; --border-radius: 10px; }
+.theme-dark { --primary-colour: #facc15; --secondary-colour: #38bdf8; --background-colour: #0b0f19; --text-colour: #f8fafc; --card-colour: #151b2b; --border-colour: #334155; --muted-colour: #cbd5e1; }
+.theme-dark .placeholder-box { background: #151b2b; }
+@media (max-width: 780px) { .navbar { align-items: flex-start; flex-direction: column; padding: 16px 0; } .hero-grid, .two-column, .grid { grid-template-columns: 1fr; } :root { --section-padding: 38px; } }
